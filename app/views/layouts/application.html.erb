@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Parking</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script>
+    parking.map = new parking.MapView()
+  </script>
+  <%= javascript_include_tag 'https://maps.googleapis.com/maps/api/js?key=AIzaSyA6K_vSRWg2ULzhppVnxvYDxO6yqmHxL8g&libraries=visualization&sensor=true_or_false&callback=parking.map.render', 'async' => true, 'defer' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
